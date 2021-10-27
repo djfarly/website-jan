@@ -9,7 +9,7 @@
       :root {
         --color-bg: #f2f6f5;
         --color-fg: #202526;
-        --color-primary: #002a25;
+        --color-primary: #00352f;
       }
 
       svg {
@@ -64,17 +64,23 @@
         letter-spacing: 0.04em;
       }
 
-      a {
-        display: inline-block;
-        margin-top: 1em;
-        font-size: smaller;
+      a:any-link {
         text-decoration: none;
         cursor: pointer;
         color: var(--color-primary);
       }
 
-      a:hover {
+      a:any-link:hover {
         color: var(--color-fg);
+        text-decoration: underline;
+        text-decoration-thickness: from-font;
+        text-underline-position: from-font;
+        text-decoration-color: var(--color-primary);
+      }
+
+      address {
+        margin-top: 1em;
+        font-size: smaller;
       }
 
       main {
@@ -142,9 +148,7 @@
     <main>
       <h1>Jan Willem Henckel</h1>
       <h2>creative coding</h2>
-      <div>
-        <a href="mailto:web@jan.cologne">— contact me</a>
-      </div>
+      <address>— <a href="mailto:web@jan.cologne">contact me</a></address>
     </main>
 
     <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
